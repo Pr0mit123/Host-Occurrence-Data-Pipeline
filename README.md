@@ -44,36 +44,6 @@ The goal of this project is to prepare reliable host occurrence datasets for use
 
 Raw data from these sources is stored in the `Raw_Data/` folder
 
-### Folder Structure
-Host_Occurrence_Data_Pipeline/
-│
-├── Raw_Data/
-│   ├── GBIF/
-│   │   └── Raw Excel/CSV files downloaded from GBIF, containing full metadata for each species.
-│   └── iNaturalist/
-│       └── Raw CSV files from iNaturalist exports, with observation details and coordinates.
-│
-├── Cleaned_Data/
-│   ├── Initial_Cleaning/
-│   │   └── Datasets after quality control: removes records with missing latitude/longitude, filters out coordinate uncertainty >1000m, standardizes columns (species, decimalLatitude, decimalLongitude, dateIdentified, coordinateUncertaintyInMeters).
-│   │
-│   ├── Cleaning2and3/
-│   │   └── Combined datasets from GBIF and iNaturalist: merges sources, standardizes column names (e.g., renaming iNat 'latitude' to 'decimalLatitude'), removes duplicates, ensures consistent data types.
-│   │
-│   └── Fully_Thinned_Data/
-│       └── Spatially thinned datasets: reduces to one observation per ~1km raster cell to minimize spatial clustering and redundancy for modeling.
-│
-├── Climate_Data/
-│   └── Climate raster files (e.g., WorldClim bioclimatic variables like BIO1 temperature) used for filtering records based on environmental suitability.
-│
-├── Scripts/
-│   ├── Initial cleaning scripts: Filter missing coords and high uncertainty.
-│   ├── Merging/standardization scripts: Combine GBIF/iNat data and standardize columns.
-│   ├── Spatial thinning scripts: Apply raster-based thinning.
-│   └── Climate-based filtering scripts: Extract and filter by climate values.
-│
-└── README.md
-
 ## Usage/Running the Pipeline
 Follow these steps to run the data cleaning pipeline. Ensure your virtual environment is activated and dependencies are installed.
 
