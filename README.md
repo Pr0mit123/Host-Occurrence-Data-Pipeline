@@ -7,36 +7,11 @@ This project supports invasive species research by cleaning and organizing host 
 The goal of this project is to prepare reliable host occurrence datasets for use in invasive species research, including species distribution modeling, spread forecasting, and geospatial analysis.
 
 ## Installation and Setup
-1. **Prerequisites**: Ensure you have Python 3.8 or higher installed on your system.
-
-2. **Clone or Download the Repository**: If hosted on GitHub, clone the repository using:
-   ```
-   git clone <repository-url>
-   ```
-   Or, download and extract the project files to your local machine.
-
-3. **Set Up Virtual Environment**:
-   - Navigate to the project directory.
-   - Create a virtual environment (if not already present):
-     `
-     python -m venv .venv
-     `
-   - Activate the virtual environment:
-     - On Windows: `.venv\Scripts\activate`
-     - On macOS/Linux: `source .venv/bin/activate`
-
-4. **Install Dependencies**:
+**Install Dependencies**:
    - Install required Python packages:
      ```
      pip install pandas numpy scipy rasterio openpyxl
      ```
-   - If you have a `requirements.txt` file (check the project root), use:
-     ```
-     pip install -r requirements.txt
-     ```
-
-5. **Verify Setup**: Run a simple test script to ensure everything is working, e.g., `python -c "import pandas; print('Setup complete')"`.
-
 ## Data Sources and Structure
 ### Data Sources
 - **GBIF (Global Biodiversity Information Facility)**: Provides raw biodiversity occurrence data for various species, including coordinates, dates, and metadata.
